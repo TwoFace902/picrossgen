@@ -40,8 +40,7 @@ int main() {
     }
     char showBoard;
     printf("Show resulting board? (Y/N) ");
-    scanf("%s",showBoard);
-    printf("%c", showBoard);
+    scanf("%s",&showBoard);
     if(showBoard == 'Y' || showBoard == 'y'){
         matprint(picboard);
     }
