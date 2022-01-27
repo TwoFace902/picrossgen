@@ -14,11 +14,11 @@ int main() {
     int seed;
     char setSeed;
     printf("Set seed manually? (Y/N): ");
-    scanf("%c",&setSeed);
+    scanf("%s",&setSeed);
     if(setSeed == 'Y' || setSeed == 'y'){
     	printf("Give seed: ");
         scanf("%d",&seed);
-    } else {
+    } else if (setSeed == 'N' || setSeed == 'n'){
     	seed = time(&t);
     }
     srand((unsigned) seed);
