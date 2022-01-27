@@ -17,7 +17,7 @@ int main() {
     scanf("%s",&setSeed);
     if(setSeed == 'Y' || setSeed == 'y'){
     	printf("Give seed: ");
-        scanf("%d",&seed);
+        scanf("%s",&seed);
     } else if (setSeed == 'N' || setSeed == 'n'){
     	seed = time(&t);
     }
