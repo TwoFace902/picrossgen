@@ -11,7 +11,18 @@ int main() {
     matrix_t* picboard;
     time_t t;
     
-    srand((unsigned) time(&t));
+    int seed;
+    char setSeed;
+    printf("Set seed manually? (Y/N): ");
+    scanf("%c",&setSeed);
+    if(setSeed == 'Y' || setSeed == 'y'){
+    	printf("Give seed: ");
+        scanf("%d",&seed);
+    } else {
+    	seed = time(&t);
+    }
+    srand((unsigned) seed);
+    printf("Seed utilized: %d\n",seed);
     
     printf("Enter rows: ");
     scanf("%d",&rows);
